@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+    font-size: 18px !important;
+    text-align: left !important;
+    color: black !important;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar {
+    background-color: rgb(1, 1, 58) !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.fa-del:hover {
+    color: red !important;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: black !important;
+    color: white !important;
+    width: 200px;
+}
+
+input {
+    box-shadow: none !important;
+    margin-top: 10px !important;
+    border: 1px solid black !important;
+}
+
+li {
+    color: white !important;
+}
+
+.li-table {
+    color: black !important;
+}
+
+.ul-admin {
+    margin-top: 10px !important;
+    background-color: rgb(1, 1, 58) !important;
+}
+
+.ul-admin li a {
+    color: white !important;
+}
+
+.li-admin-link {
+    color: black !important;
+    text-decoration: none !important;
+    padding: 20px;
+    transition: 1s;
+}
+
+.li-admin-link:hover {
+    background-color: blue;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+.li-admin {
+    color: black !important;
+    list-style-type: none !important;
+    display: inline !important;
+    margin-left: 20px !important;
+}
+
+select {
+    box-shadow: none !important;
+    border: 1px solid black !important;
+}
+
+.fab {
+    font-size: 30px !important;
+    padding: 10px;
+    color: white !important;
+}
+
+.footer {
+    background-color: rgb(1, 1, 58);
+    padding: 5px;
+}
+
+.footer h2 {
+    color: white !important;
+}
+
+@media screen and (max-width: 767px) {
+    .ul-admin {
+        font-size: small;
+    }
+    .table {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .ul-admin {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .ul-admin {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+    .li-admin {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 292px) {
+    .li-admin {
+        padding: 10px;
+    }
+}
+
+/* .img-fluid {
+    height: 200px !important;
+} */
