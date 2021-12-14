@@ -1,4 +1,4 @@
 # mern-ecommerce-website
- E-commerce Website usng Mern-Stack Technology
+ E-commerce Website usng Mern-Stack,Redux and Payment-Gateway Technology
 
-Udemy Course Project
+A Udemy Course Project
