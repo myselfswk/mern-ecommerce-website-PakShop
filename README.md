@@ -3,4 +3,4 @@
 
 A Udemy Course Project(Website) for MERN Stack
 
-note: free heroku server is not availabla anymore
+note: free heroku server is not availabla anymore(clone the code and run it)
