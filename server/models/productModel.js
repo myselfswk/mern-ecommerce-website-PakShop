@@ -16,9 +16,7 @@ const reviewSchema = mongoose.Schema({
         type: Number,
         require: true
     }
-}, {
-    timeStamps: true
-})
+}, { timeStamps: true });
 
 const productSchema = mongoose.Schema({
     name: {
@@ -47,14 +45,11 @@ const productSchema = mongoose.Schema({
     },
     rating: {
         type: Number,
-        require: true,
         default: 0
     },
     //here I change review with reviews
     reviews: [reviewSchema]
-}, {
-    timeStamps: true
-})
+}, { timeStamps: true });
 
 //'products' is same as you create it in mongodb
 const Product = mongoose.model('products', productSchema);

@@ -8,7 +8,6 @@ import Loader from '../components/Loader';
 import Product from '../components/Products'
 
 const HomeScreen = () => {
-
     const getallproductsstate = useSelector(state => state.getAllProductsReducer);
     const { loading, products, error } = getallproductsstate;
     const dispatch = useDispatch();
@@ -16,6 +15,7 @@ const HomeScreen = () => {
     useEffect(() => {
         dispatch(getAllProducts());
     }, [dispatch])
+
     return (
         <div className="container">
             <Filter />
@@ -28,7 +28,10 @@ const HomeScreen = () => {
                         <Error error="Something Went Wrong..." />
                     ) : (
                         products.map(product => {
-                            return <div key={product._id} className="col-md-3 card shadow p-3 mb-5 bg-white rounded m-4 p-2">
+                            return <div
+                                key={product._id}
+                                className="col-md-3 card shadow p-3 mb-5 bg-white rounded m-4 p-2"
+                            >
                                 <Product product={product} />
                             </div>
                         })

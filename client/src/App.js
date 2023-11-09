@@ -17,9 +17,8 @@ import AdminScreen from './screens/AdminScreen';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-
       <BrowserRouter>
+        <Navbar />
         <Route path="/" component={HomeScreen} exact />
         <Route path="/product/:id" component={ProductDescScreen} />
         <Route path="/cart" component={CartScreen} />

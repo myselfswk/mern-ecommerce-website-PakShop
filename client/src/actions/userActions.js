@@ -31,6 +31,7 @@ export const loginUser = (user) => dispatch => {
 
         localStorage.setItem('currentUser', JSON.stringify(res.data));
         window.location.href = '/';
+
     }).catch(err => {
         dispatch({
             type: 'USER_LOGIN_FAILED',

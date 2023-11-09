@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from '../actions/userActions';
 
+import { loginUser } from '../actions/userActions';
 import Error from '../components/Error';
 import Loader from '../components/Loader';
 
@@ -57,10 +58,10 @@ const LoginScreen = () => {
                             </div>
                         </form>
                     </div>
-                    <a href="/register" className="m-3" style={{
+                    <Link to="/register" className="m-3" style={{
                         color: 'black',
                         textDecoration: 'none'
-                    }}><b>Click Here To Register</b></a>
+                    }}><b>Click Here To Register</b></Link>
                 </div>
             </div>
         </div>

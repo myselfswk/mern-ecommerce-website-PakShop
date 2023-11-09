@@ -1,23 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../actions/userActions';
 
 import { Dropdown } from 'react-bootstrap';
 
 const Navbar = () => {
+    const dispatch = useDispatch();
     const cartreducer = useSelector(state => state.cartReducer);
-
     const { cartItems } = cartreducer;
 
+    //for logout user (Get user)
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-    //for logout user
-    const dispatch = useDispatch();
-
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg">
-                <a className="navbar-brand" href="/">PAK SHOP</a>
+        <>
+            <nav className="navbar navbar-expand-lg px-4">
+                <Link className="navbar-brand" to="/">PAK SHOP</Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -55,24 +55,24 @@ const Navbar = () => {
                             )
                                 : (
                                     <li className="nav-item">
-                                        <a className="nav-link" href="/login">
+                                        <Link className="nav-link" to="/login">
                                             Login
-                                        </a>
+                                        </Link>
                                     </li>
                                 )
                         }
 
                         {/* Cart */}
                         <li className="nav-item">
-                            <a className="nav-link" href="/cart">
+                            <Link className="nav-link" to="/cart">
                                 <i className="fas fa-shopping-cart"></i>
                                 {cartItems.length}
-                            </a>
+                            </Link>
                         </li>
                     </div>
                 </div>
             </nav>
-        </div>
+        </>
     );
 }
 

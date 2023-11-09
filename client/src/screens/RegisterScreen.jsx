@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerNewUser } from '../actions/userActions';
+import { Link } from 'react-router-dom';
 
+import { registerNewUser } from '../actions/userActions';
 import Error from '../components/Error';
 import Loader from '../components/Loader';
 import Success from '../components/Success';
@@ -17,6 +18,7 @@ const RegisterScreen = () => {
 
     const dispatch = useDispatch();
 
+    // register user funtion
     function register(e) {
         e.preventDefault();
         const user = {
@@ -69,10 +71,10 @@ const RegisterScreen = () => {
                             </div>
                         </form>
                     </div>
-                    <a href="/login" className="m-3" style={{
+                    <Link to="/login" className="m-3" style={{
                         color: 'black',
                         textDecoration: 'none'
-                    }}><b>Click Here To Register</b></a>
+                    }}><b>Click Here To Login</b></Link>
                 </div>
             </div>
         </div>

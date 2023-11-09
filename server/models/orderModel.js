@@ -19,9 +19,7 @@ const orderSchema = mongoose.Schema({
     orderAmount: { type: Number, require },
     transactionId: { type: String, require },
     isDelivered: { type: Boolean, require }
-}, {
-    timestamps: true
-})
+}, { timestamps: true });
 
 const Ordermodel = mongoose.model('orders', orderSchema);
 module.exports = Ordermodel;

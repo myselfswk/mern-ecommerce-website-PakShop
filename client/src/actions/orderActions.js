@@ -1,9 +1,10 @@
 import axios from 'axios';
 
+// Place order
 export const placeOrder = (token, subtotal) => (dispatch, getState) => {
     const currentUser = getState().loginReducer.currentUser;
     const demoItems = getState().cartReducer.cartItems;
-    const cartItems = new Array();
+    const cartItems = [];
 
     for (var i = 0; i < demoItems.length; i++) {
         var item = {
@@ -60,7 +61,6 @@ export const getOrdersByUserId = () => (dispatch, getState) => {
 
 //show order details
 export const getOrderById = (orderid) => (dispatch, getState) => {
-
     dispatch({
         type: 'GET_ORDERBYID_REQUEST'
     })
@@ -81,7 +81,6 @@ export const getOrderById = (orderid) => (dispatch, getState) => {
 
 //show order details to admin panel
 export const getAllOrders = () => (dispatch, getState) => {
-
     dispatch({
         type: 'GET_ALLORDERS_REQUEST'
     })
